@@ -6,15 +6,15 @@
 <script type="text/javascript">
     window.onload=function(){
         // var redirect_url = window.location.href;
-        redirect_url = "https://nhlbreakaway.com";
+        redirect_url = "https://google.com";
         console.log(redirect_url);
         if (navigator.userAgent.includes('Mobile') && (navigator.userAgent.includes('LinkedInApp') || navigator.userAgent.includes("Instagram"))) {
             if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')){
                 // this is an ios device
-                var innerHTML = `<div>iOS link here: <A Href="x-safari-${redirect_url}">NHL Breakaway</A></div>`;
+                var innerHTML = `<div>iOS link here: <A Href="x-safari-${redirect_url}">Google</A></div>`;
             }else{
                 // this is an android or some other non iOS mobile device
-                var innerHTML = `<div>Andriod link here: <A Href="${redirect_url}" target="_blank" download>NHL Breakaway</A></div>`;
+                var innerHTML = `<div>Andriod link here: <A Href="${redirect_url}" target="_blank" download>Google</A></div>`;
             }
             document.body.innerHTML = innerHTML;
         }
