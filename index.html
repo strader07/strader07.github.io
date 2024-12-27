@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Instagram Redirect</title>
+<script type="text/javascript">
+    window.onload=function(){
+        // var redirect_url = window.location.href;
+        redirect_url = "https://nhlbreakaway.com";
+        console.log(redirect_url);
+        if (navigator.userAgent.includes('Mobile') && (navigator.userAgent.includes('LinkedInApp') || navigator.userAgent.includes("Instagram"))) {
+            if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')){
+                // this is an ios device
+                var innerHTML = `<div>iOS link here: <A Href="x-safari-${redirect_url}">NHL Breakaway</A></div>`;
+            }else{
+                // this is an android or some other non iOS mobile device
+                var innerHTML = `<div>Andriod link here: <A Href="${redirect_url}" target="_blank" download>NHL Breakaway</A></div>`;
+            }
+            document.body.innerHTML = innerHTML;
+        }
+    }
+</script>
+</head>
+
+<body>
+Testing Instagram / LinkedIn browsers<BR>
+You made it here so no redirect was needed!
+</body>
+</html>
